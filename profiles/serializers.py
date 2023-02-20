@@ -8,7 +8,7 @@ class ProfileSerializer(serializers.ModelSerializer):
     """
     Lists all the fields of the camper profiles if the owner is logged in.
     """
-    
+
     def get_is_owner(self, obj):
         request = self.context['request']
         return request.user == obj.owner
