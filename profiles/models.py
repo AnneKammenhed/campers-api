@@ -10,7 +10,7 @@ class Profile(models.Model):
     camper = models.CharField(max_length=255, blank=True)
     camping_memories = models.TextField(blank=True)
     image = models.ImageField(
-        upload_to='images/', default='../samples/bike.jpg'
+        upload_to='images/', default='../default_profile_oni8cm.jpg'
     )
 
     class Meta:
