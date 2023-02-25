@@ -13,7 +13,7 @@ python3 manage.py makemigrations --dry-run
 
 python3 manage.py test
 
-python3 manage.py startapp post
+python3 manage.py startapp likes
 
 To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
