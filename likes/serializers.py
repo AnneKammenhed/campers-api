@@ -3,13 +3,14 @@ from rest_framework import serializers
 from .models import Like
 
 
-class PostSerializer(serializers.ModelSerializer):
+class LikeSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
 
     class Meta:
         model = Like
         fields = ['id', 'created_at', 'owner', 'post']
 
+# stops campers to like the same post twice
     def create(self, validated_data):
         try:
             return super().create(validated_data)
